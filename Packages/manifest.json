@@ -1,6 +1,6 @@
 {
   "dependencies": {
-    "com.google.xr.cardboard": "file:C:/RealidadMixta/CardBoard/cardboard-xr-plugin-master",
+    "com.google.xr.cardboard": "file:../cardboard-xr-plugin-master",
     "com.unity.ai.navigation": "2.0.6",
     "com.unity.collab-proxy": "2.7.1",
     "com.unity.ide.rider": "3.0.31",

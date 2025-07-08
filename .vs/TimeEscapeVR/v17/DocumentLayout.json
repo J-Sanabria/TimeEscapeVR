@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\TimeEscapeVR\\TimeEscapeVR\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{AD68B758-3E4C-05FB-6CA8-BE48F3EF70ED}|CardboardSamples.csproj|c:\\timeescapevr\\timeescapevr\\assets\\samples\\google cardboard xr plugin for unity\\1.28.0\\hello cardboard\\scripts\\vrmodecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{AD68B758-3E4C-05FB-6CA8-BE48F3EF70ED}|CardboardSamples.csproj|solutionrelative:assets\\samples\\google cardboard xr plugin for unity\\1.28.0\\hello cardboard\\scripts\\vrmodecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "VrModeController.cs",
+              "DocumentMoniker": "C:\\TimeEscapeVR\\TimeEscapeVR\\Assets\\Samples\\Google Cardboard XR Plugin for Unity\\1.28.0\\Hello Cardboard\\Scripts\\VrModeController.cs",
+              "RelativeDocumentMoniker": "Assets\\Samples\\Google Cardboard XR Plugin for Unity\\1.28.0\\Hello Cardboard\\Scripts\\VrModeController.cs",
+              "ToolTip": "C:\\TimeEscapeVR\\TimeEscapeVR\\Assets\\Samples\\Google Cardboard XR Plugin for Unity\\1.28.0\\Hello Cardboard\\Scripts\\VrModeController.cs",
+              "RelativeToolTip": "Assets\\Samples\\Google Cardboard XR Plugin for Unity\\1.28.0\\Hello Cardboard\\Scripts\\VrModeController.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABMAAAAaAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-07-08T03:02:42.885Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
