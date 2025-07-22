@@ -38,7 +38,7 @@ public class CardboardStartup : MonoBehaviour
         // Checks if the device parameters are stored and scans them if not.
         if (!Api.HasDeviceParams())
         {
-            Api.ScanDeviceParams();
+            //Api.ScanDeviceParams();
         }
     }
 
@@ -49,7 +49,7 @@ public class CardboardStartup : MonoBehaviour
     {
         if (Api.IsGearButtonPressed)
         {
-            Api.ScanDeviceParams();
+            //Api.ScanDeviceParams();
         }
 
         if (Api.IsCloseButtonPressed)
