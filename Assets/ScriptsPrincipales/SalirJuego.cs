@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class SalirDelJuego : MonoBehaviour
 {
-    public void Salir()
+    public void OnPointerClickXR()
     {
         Debug.Log("Saliendo del juego...");
 
