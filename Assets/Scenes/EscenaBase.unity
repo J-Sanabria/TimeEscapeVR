@@ -4700,7 +4700,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 65536e910924dd84cbb1310ea1cdd100, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: 65536e910924dd84cbb1310ea1cdd100, type: 3}
       propertyPath: m_TagString
@@ -8978,7 +8978,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   personaje: {fileID: 156532383}
-  Saludo: {fileID: 8300000, guid: 77a550462006dea45bf52e172185789f, type: 3}
+  Saludo: {fileID: 8300000, guid: 848ad5d3041679d4ab4cbd8031338ea5, type: 3}
   PorqueVuelves: {fileID: 8300000, guid: b11fc3cc7c5787c47b7daa0bd50b85c6, type: 3}
   Artefacto01: {fileID: 8300000, guid: 597663e4785bb204ca8122a9c6634e57, type: 3}
   Artefacto02: {fileID: 8300000, guid: 5b39d4e5d63ab5f449693818bda82bc8, type: 3}

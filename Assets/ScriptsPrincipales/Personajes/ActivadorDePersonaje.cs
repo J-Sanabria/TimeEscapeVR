@@ -39,7 +39,6 @@ public class ActivadorDePersonaje : MonoBehaviour
         {
             personaje.ActivarDesdeOtroObjeto(Saludo);
             saludoActivado = true;
-            InventarioManager.Instance.Inicio = true;
             return;
         }
 

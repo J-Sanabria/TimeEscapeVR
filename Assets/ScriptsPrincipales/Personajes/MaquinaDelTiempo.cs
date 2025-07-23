@@ -17,53 +17,52 @@ public class MaquinaDelTiempo : MonoBehaviour
             return;
         }
 
-        int cantidadArtefactos = InventarioManager.Instance.CantidadArtefactos;
+        int cantidadArtefactos = InventarioManager.Instance.cantidadArtefactos;
 
-        switch (cantidadArtefactos)
+        bool InicioInventario = InventarioManager.Instance.Inicio;
+
+        if (InicioInventario == false)
         {
-            case 0:
-                if (Incio != null)
-                {
-                    personaje.ActivarDesdeOtroObjeto(Incio);
-                    Debug.Log("Audio: Inicio");
-                }
-                break;
+            personaje.ActivarDesdeOtroObjeto(Incio);
+            Debug.Log("Audio: Inicio");
+        }
+        else
+        {
+            switch (cantidadArtefactos)
+            {
+                case 0:
+                    if (Incio != null)
+                    {
+                        personaje.ActivarDesdeOtroObjeto(Incio);
+                        Debug.Log("Audio: Inicio");
+                    }
+                    break;
 
-            case 1:
-                if (!InventarioManager.Instance.Artefacto01Activado && Artefacto01 != null)
-                {
+                case 1:
                     personaje.ActivarDesdeOtroObjeto(Artefacto01);
                     InventarioManager.Instance.Artefacto01Activado = true;
-                    Debug.Log("Audio: Artefacto 01");
-                }
-                break;
+                    Debug.Log("Audio: un solo artefacto");
+                    break;
 
-            case 2:
-                if (!InventarioManager.Instance.Artefacto02Activado && Artefacto02 != null)
-                {
+                case 2:
                     personaje.ActivarDesdeOtroObjeto(Artefacto02);
                     InventarioManager.Instance.Artefacto02Activado = true;
                     Debug.Log("Audio: Artefacto 02");
-                }
-                break;
+                    break;
 
-            case 3:
-                if (!InventarioManager.Instance.Artefacto03Activado && Artefacto03 != null)
-                {
+                case 3:
                     personaje.ActivarDesdeOtroObjeto(Artefacto03);
                     InventarioManager.Instance.Artefacto03Activado = true;
                     Debug.Log("Audio: Artefacto 03");
-                }
-                break;
+                    break;
 
-            case 4:
-                if (!InventarioManager.Instance.Win && Win != null)
-                {
+                case 4:
                     personaje.ActivarDesdeOtroObjeto(Win);
                     InventarioManager.Instance.Win = true;
                     Debug.Log("Audio: Win");
-                }
-                break;
+                    break;
+            }
         }
+           
     }
 }
