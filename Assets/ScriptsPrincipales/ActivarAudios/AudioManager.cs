@@ -4,7 +4,6 @@ public class AudioManager : MonoBehaviour
 {
     private AudioSource audioSource;
     public AudioClip audioInicio;
-    private bool AudioEnReproduccion = false;// Clip de sonido que se reproducirá al iniciar la escena
 
     private void Awake()
     {
@@ -12,8 +11,6 @@ public class AudioManager : MonoBehaviour
         if (audioSource == null)
         {
             audioSource = gameObject.AddComponent<AudioSource>();
-            AudioEnReproduccion = true;
-            Invoke("VolverAReposo", audioInicio.length);
         }
     }
 
@@ -21,7 +18,7 @@ public class AudioManager : MonoBehaviour
     {
         if (audioInicio != null)
         {
-            audioSource.PlayOneShot(audioInicio);
+            ReproducirSonido(audioInicio);
         }
     }
 
@@ -29,23 +26,22 @@ public class AudioManager : MonoBehaviour
     {
         if (clip != null)
         {
-            if(AudioEnReproduccion == true)
+            // Si hay un audio sonando, detenerlo antes de reproducir uno nuevo
+            if (audioSource.isPlaying)
             {
                 audioSource.Stop();
-                audioSource.PlayOneShot(clip);
-                AudioEnReproduccion = true;
-            } else
-            {
-                audioSource.PlayOneShot(clip);
-                AudioEnReproduccion = true;
             }
-         
+
+            audioSource.clip = clip;
+            audioSource.Play();
         }
     }
 
     public void Pausar()
     {
-        audioSource.Stop();
-        AudioEnReproduccion = false;
+        if (audioSource.isPlaying)
+        {
+            audioSource.Stop();
+        }
     }
 }

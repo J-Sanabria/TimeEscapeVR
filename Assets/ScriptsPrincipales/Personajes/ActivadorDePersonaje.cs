@@ -14,6 +14,12 @@ public class ActivadorDePersonaje : MonoBehaviour
     private bool saludoActivado = false;
     private bool porqueVuelvesActivado = false;
 
+    private void Start()
+    {
+        // Llama a la función como si se hubiera hecho clic
+        OnPointerClickXR();
+    }
+
     private void Update()
     {
         // Reiniciar saludo y diálogo de "porque vuelves" si ya terminó de hablar

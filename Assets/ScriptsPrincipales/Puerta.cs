@@ -7,7 +7,17 @@ public class CambioEscenaGaze : MonoBehaviour
 
     public void OnPointerClickXR()
     {
-        if (InventarioManager.Instance.Inicio == false)InventarioManager.Instance.Inicio = true;
+        // Si la escena actual es "Tutorial", solo cambia la escena sin modificar el inventario
+        if (SceneManager.GetActiveScene().name == "Tutorial")
+        {
+            CambiarEscena();
+            return;
+        }
+
+        // Si no es "Tutorial", modificar el inventario como antes
+        if (!InventarioManager.Instance.Inicio)
+            InventarioManager.Instance.Inicio = true;
+
         CambiarEscena();
     }
 

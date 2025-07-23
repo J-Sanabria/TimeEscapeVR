@@ -2,16 +2,14 @@ using UnityEngine;
 
 public class ActivadorAudio : MonoBehaviour
 {
-    public AudioManager audioManager; // Referencia directa al AudioManager
+    public AudioManager audioManager;
     public AudioClip audioClip;
-    private bool AudioActivado = false; 
 
     public void OnPointerClickXR()
     {
-        if (audioManager != null && audioClip != null && AudioActivado == false)
+        if (audioManager != null && audioClip != null)
         {
             audioManager.ReproducirSonido(audioClip);
-            AudioActivado = true;
         }
         else
         {

@@ -16,11 +16,15 @@ public class RestaurarObjetos : MonoBehaviour
         if (InventarioManager.Instance.Artefacto03) artefacto03.SetActive(true);
         if (InventarioManager.Instance.Artefacto04) artefacto04.SetActive(true);
 
-        int cantidadArtefactos = InventarioManager.Instance.CantidadArtefactos;
-        if (cantidadArtefactos == 4)
+        if (InventarioManager.Instance.Win)
         {
             Premio.SetActive(true);
             Puerta.SetActive(true);
+            Debug.Log("¡Has ganado! Se activan el pastel y la puerta.");
+        }
+        else
+        {
+            Debug.Log("Aún no has ganado. Faltan artefactos.");
         }
     }
 }
