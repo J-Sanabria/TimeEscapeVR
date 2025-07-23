@@ -143,6 +143,7 @@ PlayerSettings:
   bundleVersion: 0.1.0
   preloadedAssets:
   - {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  - {fileID: 3196003915750055411, guid: 6e34ddda1e75a914ca3a2221420d830f, type: 2}
   metroInputSource: 0
   wsaTransparentSwapchain: 0
   m_HolographicPauseOnTrackingLoss: 1
@@ -267,7 +268,7 @@ PlayerSettings:
   AndroidTargetArchitectures: 2
   AndroidSplashScreenScale: 0
   androidSplashScreen: {fileID: 0}
-  AndroidKeystoreName: C:/VR/apkTimeEscape/TimeScape.keystore
+  AndroidKeystoreName: '{inproject}: key/TimeScape.keystore'
   AndroidKeyaliasName: timescape
   AndroidEnableArmv9SecurityFeatures: 0
   AndroidEnableArm64MTE: 0
