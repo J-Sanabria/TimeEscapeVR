@@ -1,28 +1,31 @@
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using System.Collections;
 
 public class CambioEscenaGaze : MonoBehaviour
 {
-    [SerializeField] private string escenaDestino = "EscenaPrueba01"; // Nombre de la escena a cargar
+    [SerializeField] private string escenaDestino = "EscenaPrueba01";
+    [SerializeField] private Animator fadeAnimator; // arrástralo desde el inspector
+    [SerializeField] private float tiempoDeFade = 1f;
 
     public void OnPointerClickXR()
     {
-        // Si la escena actual es "Tutorial", solo cambia la escena sin modificar el inventario
         if (SceneManager.GetActiveScene().name == "Tutorial")
         {
-            CambiarEscena();
+            StartCoroutine(CambiarEscenaConTransicion());
             return;
         }
 
-        // Si no es "Tutorial", modificar el inventario como antes
         if (!InventarioManager.Instance.Inicio)
             InventarioManager.Instance.Inicio = true;
 
-        CambiarEscena();
+        StartCoroutine(CambiarEscenaConTransicion());
     }
 
-    private void CambiarEscena()
+    private IEnumerator CambiarEscenaConTransicion()
     {
+        fadeAnimator.SetTrigger("FadeOut");
+        yield return new WaitForSeconds(tiempoDeFade);
         SceneManager.LoadScene(escenaDestino);
     }
 }
