@@ -5369,6 +5369,7 @@ MonoBehaviour:
   audioManager: {fileID: 1175900962}
   audioClip: {fileID: 8300000, guid: 36e3ab4d88d617841ba0b09018210486, type: 3}
   reproducirUnaVez: 1
+  objetoParaActivar: {fileID: 0}
 --- !u!1001 &1177606432
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8494,7 +8495,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   escenaDestino: EscenaBase
   fadeAnimator: {fileID: 62078700}
-  tiempoDeFade: 1
+  tiempoDeFade: 0
 --- !u!65 &1691427634
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10329,6 +10330,7 @@ MonoBehaviour:
   audioManager: {fileID: 1175900962}
   audioClip: {fileID: 8300000, guid: 6c7637d5d554abf44a256d663fb89581, type: 3}
   reproducirUnaVez: 0
+  objetoParaActivar: {fileID: 0}
 --- !u!136 &2039522457
 CapsuleCollider:
   m_ObjectHideFlags: 0
@@ -10853,6 +10855,7 @@ MonoBehaviour:
   audioManager: {fileID: 1175900962}
   audioClip: {fileID: 8300000, guid: 67433b692519b534aab9393259efd91f, type: 3}
   reproducirUnaVez: 0
+  objetoParaActivar: {fileID: 0}
 --- !u!114 &2130773700
 MonoBehaviour:
   m_ObjectHideFlags: 0
