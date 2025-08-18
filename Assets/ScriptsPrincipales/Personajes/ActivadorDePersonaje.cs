@@ -16,13 +16,13 @@ public class ActivadorDePersonaje : MonoBehaviour
 
     private void Start()
     {
-        // Llama a la función como si se hubiera hecho clic
+        // Llama a la funciï¿½n como si se hubiera hecho clic
         OnPointerClickXR();
     }
 
     private void Update()
     {
-        // Reiniciar saludo y diálogo de "porque vuelves" si ya terminó de hablar
+        // Reiniciar saludo y diï¿½logo de "porque vuelves" si ya terminï¿½ de hablar
         if (personaje != null && !personaje.DialogoActivo)
         {
             saludoActivado = false;
@@ -42,7 +42,7 @@ public class ActivadorDePersonaje : MonoBehaviour
             return;
         }
 
-        // Si ya inició pero no está vacío y aún no se ha activado "porque vuelves"
+        // Si ya iniciï¿½ pero no estï¿½ vacï¿½o y aï¿½n no se ha activado "porque vuelves"
         if (InventarioManager.Instance.Inicio && !InventarioManager.Instance.Vacio && !porqueVuelvesActivado && PorqueVuelves != null)
         {
             personaje.ActivarDesdeOtroObjeto(PorqueVuelves);
