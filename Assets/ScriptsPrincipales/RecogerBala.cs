@@ -3,8 +3,11 @@ using UnityEngine;
 
 public class RecogerBala : MonoBehaviour
 {
-    public Transform puntoMira; // Punto donde se ancla la bala (hijo de la cámara)
+    public Transform puntoMira; // Punto donde se ancla la bala (hijo de la cÃ¡mara)
     private GameObject balaSujeta;
+
+    // ðŸ”¹ Nuevo: Objeto que desaparecerÃ¡ al recoger la bala
+    public GameObject objetoADesaparecer;
 
     void Update()
     {
@@ -26,14 +29,20 @@ public class RecogerBala : MonoBehaviour
     private void Recoger()
     {
         balaSujeta = gameObject;
+
+        // ðŸ”¹ Si hay un objeto asignado, lo desactivamos
+        if (objetoADesaparecer != null)
+        {
+            objetoADesaparecer.SetActive(false);
+        }
     }
 
     private void OnTriggerEnter(Collider otro)
     {
         Debug.Log("Si colisiona");
-        if (otro.CompareTag("Cañon"))
+        if (otro.CompareTag("Caï¿½on"))
         {
-            otro.GetComponent<BaseObjtosInreactuables>().CargarCañon();
+            // otro.GetComponent<BaseObjtosInreactuables>().CargarCaï¿½on();
             DesaparecerBala();
         }
     }
@@ -42,10 +51,8 @@ public class RecogerBala : MonoBehaviour
     {
         if (balaSujeta != null)
         {
-
             balaSujeta = null;
             gameObject.SetActive(false);
         }
-
     }
 }
