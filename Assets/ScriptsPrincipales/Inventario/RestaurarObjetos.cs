@@ -36,6 +36,7 @@ public class RestaurarObjetos : MonoBehaviour
         if (InventarioManager.Instance.Win)
         {
             // Cambiar el tag de la máquina del tiempo
+            Premio.SetActive(true);
             TimeMachine.tag = "Interactable";
             Debug.Log("¡Has ganado! Se activan el pastel, la puerta y la máquina del tiempo es interactuable.");
         }
